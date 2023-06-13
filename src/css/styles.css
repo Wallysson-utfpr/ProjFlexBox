@@ -23,6 +23,12 @@ h1 {
 
 }
 
+.imgMario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .questao {
     position: relative;
     display: flex;

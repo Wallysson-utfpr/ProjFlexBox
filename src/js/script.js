@@ -9,21 +9,32 @@ let tarefaAtual = 0;
 const tarefas = [
   {
     texto:
-      "Posicione a imagem no canto superior esquerdo da tela usando as propriedades 'justify-content' e 'align-items'.",
-    resposta: "justify-content: flex-start; align-items: flex-start;",
+      "Posicione a imagem no canto esquerdo da tela usando a propriedade 'justify-content'.",
+    resposta: "justify-content: flex-start;",
   },
   {
     texto:
-      "Posicione a imagem no canto superior direito da tela usando as propriedades 'justify-content' e 'align-items'.",
-    resposta: "justify-content: flex-end; align-items: flex-start;",
+      "Agora, alinhe a imagem na parte superior esquerda da tela usando a propriedade 'align-items'.",
+    resposta: "align-items: flex-start;",
   },
   {
     texto:
-      "Posicione a imagem no centro da tela horizontalmente usando a propriedade 'justify-content'.",
-    resposta: "justify-content: center;",
+      "Posicione a imagem no canto direito da tela usando as propriedades 'justify-content'.",
+    resposta: "justify-content: flex-end;",
   },
   {
-    texto: "Muito bem! Tarefas finalizadas.",
+    texto:
+      "Agora, alinhe a imagem na parte superior direita da tela usando a propriedade 'align-items'.",
+    resposta: "align-items: flex-end;",
+  },
+  {
+    texto:
+      "Posicione a imagem no centro da tela usando as propriedades 'justify-content' e 'align-items'." +
+      " Obs: separado por ponto e vírgula (;)",
+    resposta: "justify-content: center; align-items: center;",
+  },
+  {
+    texto: "Parabéns! Todas as tarefas foram concluídas com sucesso.",
   },
 ];
 
@@ -64,17 +75,29 @@ function exibirTarefa(indice) {
 function atualizarPosicaoImagem(indice) {
   if (indice === 0) {
     imagem.style.left = "0";
-    imagem.style.top = "0";
-    console.log("aqui");
+    imagem.style.top = "50%";
+    imagem.style.transform = "translateY(-50%)";
   } else if (indice === 1) {
-    imagem.style.right = "calc(98% - 100px)";
-    imagem.style.top = "0";
+    imagem.style.left = "0";
+    imagem.style.top = "40";
   } else if (indice === 2) {
-    imagem.style.left = "calc(98% - 100px)";
+    imagem.style.right = "auto";
+    imagem.style.left = "0";
     imagem.style.top = "0";
   } else if (indice === 3) {
-    imagem.style.left = "calc(50% - 50px)";
-    imagem.style.top = "calc(50% - 100px)";
+    const currentTop = parseFloat(imagem.style.top) || 0;
+    const newTop = currentTop + 40;
+    imagem.style.left = "auto";
+    imagem.style.right = "0";
+    imagem.style.top = `${newTop}%`;
+  } else if (indice === 4) {
+    imagem.style.left = "auto";
+    imagem.style.right = "0";
+    imagem.style.top = "0";
+  } else if (indice === 5) {
+    imagem.style.left = "50%";
+    imagem.style.top = "50%";
+    imagem.style.transform = "translate(-50%, -50%)";
   }
 
   imagem.style.position = "absolute";
