@@ -95,8 +95,8 @@ function atualizarPosicaoImagem(indice) {
     imagem.style.right = "0";
     imagem.style.top = "0";
   } else if (indice === 5) {
-    imagem.style.left = "50%";
-    imagem.style.top = "50%";
+    imagem.style.left = "46%";
+    imagem.style.top = "46%";
     imagem.style.transform = "translate(-50%, -50%)";
   }
 
