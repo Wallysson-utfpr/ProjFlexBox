@@ -35,7 +35,10 @@ formulario.addEventListener("submit", function (e) {
 
   if (resposta === tarefas[tarefaAtual].resposta) {
     textoResultado.textContent = "Parabéns, você acertou!";
-    textoResultado.style.color = "#1abc9c";
+    textoResultado.style.fontWeight = "bold";
+    textoResultado.style.fontSize = "28px";
+    textoResultado.style.color = "green";
+    textoResultado.style.backgroundColor = "white";
     tarefaAtual++;
     entradaResposta.value = "";
     exibirTarefa(tarefaAtual);
@@ -47,7 +50,10 @@ formulario.addEventListener("submit", function (e) {
     }
   } else {
     textoResultado.textContent = "Ops, tente novamente!";
-    textoResultado.style.color = "#c0392b";
+    textoResultado.style.fontWeight = "bold";
+    textoResultado.style.fontSize = "28px";
+    textoResultado.style.color = "red";
+    textoResultado.style.backgroundColor = "white";
   }
 });
 

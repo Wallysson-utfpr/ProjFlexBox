@@ -23,18 +23,12 @@ h1 {
 
 }
 
-
 .questao {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    position: relative;
-}
-
-.questao img {
-    width: 200px;
-    height: auto;
 }
 
 .teste {
