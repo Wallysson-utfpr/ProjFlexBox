@@ -13,7 +13,7 @@ body {
 
 #video-text {
   font-size: 36px;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   color: white;
   font-weight: bolder;
 }
@@ -58,3 +58,19 @@ body {
     font-size: 16px;
   }
 }
+
+.introducao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  
