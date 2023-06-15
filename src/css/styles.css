@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
     background-color: #e6c350;
+    margin-top: 2%;
+
 }
 
   h1 {
@@ -24,9 +26,6 @@
     color: black;
     margin-bottom: 20px;
   }
-  
-
-
 
   .imgMario {
     display: flex;
